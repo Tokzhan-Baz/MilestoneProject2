@@ -1,4 +1,4 @@
-## StartUp
+
 # Milestone-1
       1. Your project should contain at least 7 models with all relationships types
 
