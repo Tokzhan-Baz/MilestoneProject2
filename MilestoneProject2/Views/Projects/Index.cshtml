@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MilestoneProject2.Models.Projects>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="card-deck">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            
+        
+                <img src="@item.Poster" asp-append-version="true" class="card-img-top" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"> @Html.DisplayFor(modelItem => item.Title)</h5>
+                    <p class="card-text"> @Html.DisplayFor(modelItem => item.Text)</p>
+
+                       
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+        </div>
+          
+    }
+</div>
+
