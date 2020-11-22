@@ -1,7 +1,6 @@
 
 # Milestone-1
-     :white_check_mark: 1. Your project should contain at least 7 models with all relationships types 
-
+     1. Your project should contain at least 7 models with all relationships types  
       One-to-One: News - NewsN
       One-to-Many: Projects - News
       Many-to-Many: Startups-News
