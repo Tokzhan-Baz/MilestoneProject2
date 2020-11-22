@@ -9,14 +9,54 @@ using MilestoneProject2.Data;
 namespace MilestoneProject2.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201122081207_IniitCr")]
-    partial class IniitCr
+    [Migration("20201122105247_InitCr")]
+    partial class InitCr
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
+
+            modelBuilder.Entity("MilestoneProject2.Models.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Poster")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("text")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+                });
+
+            modelBuilder.Entity("MilestoneProject2.Models.Investor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Poster")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("budget")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Investors");
+                });
 
             modelBuilder.Entity("MilestoneProject2.Models.News", b =>
                 {

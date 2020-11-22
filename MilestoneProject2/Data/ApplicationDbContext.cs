@@ -14,7 +14,9 @@ namespace MilestoneProject2.Data
     {
         public DbSet<News> News { get; set; }
 
-       
+        public DbSet<Company> Companies { get; set; }
+
+        public DbSet<Investor> Investors { get; set; }
         public DbSet<Projects> Projects{ get; set; }
       
         public DbSet<NewsN> NewsNs { get; set; }
