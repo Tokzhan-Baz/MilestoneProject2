@@ -6,6 +6,9 @@
       Many-to-Many: Startups-News
 
     2. For all models there should be controllers with CRUD actions 
+    
     3. Create the view which related on models and controllers 
+    
     4. At least 7 views 
-    5. Use the master page: **master.aspx , /views/shared/Site.Master (bold)**
+    
+    5. Use the master page: master.aspx , /views/shared/Site.Master 
