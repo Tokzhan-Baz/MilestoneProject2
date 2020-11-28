@@ -18,6 +18,6 @@
 
      2. At least 7 tables
 
-     3. Create all methods
+     3. Create all methods   ( Added Search method  )
 
-     4. Examine all methods by using jQuery
+     4. Examine all methods by using jQuery (Home /index.cshtml)
