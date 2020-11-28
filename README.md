@@ -12,3 +12,12 @@
     4. At least 7 views 
     
     5. Use the master page: master.aspx , /views/shared/Site.Master 
+    
+# Milestone-2 :white_check_mark:
+     1. All data should be stored in a database (you can choose the DBMS by yourself)
+
+     2. At least 7 tables
+
+     3. Create all methods
+
+     4. Examine all methods by using jQuery
