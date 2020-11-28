@@ -149,5 +149,13 @@ namespace MilestoneProject2.Controllers
         {
             return _context.Projects.Any(e => e.Id == id);
         }
+        public async Task<IActionResult> SearchProjects(string text)
+        {
+            text = text.ToLower();
+            var searchedMovies = await _context.Projects.Where(movie => movie.Title.ToLower().Contains(text)
+                                            || movie.Text.ToLower().Contains(text))
+                                        .ToListAsync();
+            return View("Index", searchedMovies);
+        }
     }
 }
