@@ -10,7 +10,7 @@ using MilestoneProject2.Models.Identity;
 
 namespace MilestoneProject2.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<UserEntity, IdentityRole, string>
     {
         public DbSet<News> News { get; set; }
 

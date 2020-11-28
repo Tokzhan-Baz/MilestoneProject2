@@ -156,5 +156,13 @@ namespace MilestoneProject2.Controllers
         {
             return _context.News.Any(e => e.Id == id);
         }
+        public async Task<IActionResult> Search(string text)
+        {
+            text = text.ToLower();
+            var searchedMovies = await _context.News.Where(movie => movie.Information.ToLower().Contains(text)
+                                            || movie.Title.ToLower().Contains(text))
+                                        .ToListAsync();
+            return View("Index", searchedMovies);
+        }
     }
 }

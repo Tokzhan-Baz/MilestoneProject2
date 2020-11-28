@@ -22,7 +22,11 @@ namespace MilestoneProject2.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        public string Show(string text1, string text2)
+        {
+            return " " + text1 + " " + text2;
+        }
         public IActionResult Privacy()
         {
             return View();
