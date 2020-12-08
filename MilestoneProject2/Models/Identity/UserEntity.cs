@@ -13,6 +13,7 @@ namespace MilestoneProject2.Models.Identity
         }
 
         public string Name { get; set; }
-        public string Company { get; set; }
+        public string SurName { get; set; }
+     
     }
 }

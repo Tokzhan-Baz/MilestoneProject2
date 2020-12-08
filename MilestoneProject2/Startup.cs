@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using MilestoneProject2.Data;
 using MilestoneProject2.Models.Identity;
 
+
 namespace MilestoneProject2
 {
     public class Startup
@@ -40,10 +41,16 @@ namespace MilestoneProject2
             {
                 options.UseSqlite(Configuration.GetConnectionString("ConnectionName"));
             });
+           
+            services.AddMvc();
 
+            /* services.AddScoped<CompanyService>();
+             services.AddScoped<ICompanyRepository, CompanyRepository>();*/
 
-            /*services.AddIdentity<UserEntity, IdentityRole>()
-               .AddEntityFrameworkStores<ApplicationDbContext>();*/
+    
+
+            services.AddIdentity<UserEntity, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -83,7 +90,35 @@ namespace MilestoneProject2
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-               
+                routes.MapRoute(
+                    name: "account",
+                    template: "{controller=Account}/{action=Login}/{id?}");
+                routes.MapRoute(
+                     name: "roles",
+                     template: "{controller=Roles}/{action=Index}/{id?}");
+                routes.MapRoute(
+                     name: "users",
+                     template: "{controller=Users}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "News",
+                    template: "{controller=News}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "Projects",
+                    template: "{controller=Projects}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "Startups",
+                    template: "{controller=Startups}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "StartupsNews",
+                    template: "{controller=StartupsNews}/{action=Index}/{id?}");
+
+                routes.MapRoute(
+                    name: "Investors",
+                    template: "{controller=Investors}/{action=Index}/{id?}");
             });
         }
 

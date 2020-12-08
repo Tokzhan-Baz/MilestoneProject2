@@ -13,7 +13,7 @@ namespace MilestoneProject2.Data
     public class ApplicationDbContext : IdentityDbContext<UserEntity, IdentityRole, string>
     {
         public DbSet<News> News { get; set; }
-
+       
         public DbSet<Company> Companies { get; set; }
 
         public DbSet<Investor> Investors { get; set; }
