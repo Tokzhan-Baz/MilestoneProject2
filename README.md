@@ -21,3 +21,4 @@
      3. Create all methods   ( Added Search method :News,Projects )
 
      4. Examine all methods by using jQuery (Home /index.cshtml)
+# Milestone-2 :white_check_mark:
