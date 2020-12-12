@@ -21,4 +21,9 @@
      3. Create all methods   ( Added Search method :News,Projects )
 
      4. Examine all methods by using jQuery (Home /index.cshtml)
-# Milestone-2 :white_check_mark:
+# Milestone-3 :white_check_mark:
+# Milestone-4 :white_check_mark:
+Admin: admin@gmail.com
+admin123
+
+
